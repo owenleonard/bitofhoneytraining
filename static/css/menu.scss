@@ -88,9 +88,14 @@
     margin-top: 10px;
     width: 200px;
 
-    > img {
-        border: 0;
-        margin-left: 30px;
-        margin-top: 15px;
+    > a {
+        outline: none;
+
+        > img {
+            border: 0;
+            margin-left: 30px;
+            margin-top: 15px;
+            outline: none;
+        }
     }
 }

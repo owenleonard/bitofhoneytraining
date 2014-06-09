@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd ..
+../ENV/bin/python manage.py graph_models -a -g -o bitofhoney.png bitofhoney
+

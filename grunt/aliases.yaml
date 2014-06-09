@@ -1,0 +1,11 @@
+default:
+ - 'newer:jshint'
+ - 'newer:scsslint'
+ - 'newer:concat'
+ - 'newer:uglify'
+ - 'newer:sass'
+
+parallel:
+  - 'concurrent:first'
+  - 'concurrent:second'
+  - 'concurrent:third'
