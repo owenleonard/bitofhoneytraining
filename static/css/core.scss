@@ -1,0 +1,131 @@
+@import 'colors';
+
+body {
+    background-color: $background-color;  // (The background color is specified elsewhere, so do a global replacement if it ever changes)
+    font-family: "Dejavu Sans",sans-serif;
+    font-size: .9em;
+    margin: 0;
+    padding: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.25em;
+}
+
+a:link {
+    color: #009;
+}
+
+a:visited {
+    color: #48468f;
+}
+
+a:hover {
+    color: #f20;
+}
+
+a[name] {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.wrapper {
+    background-color: $background-color;
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.section {
+    background-color: $section-background-color;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    font-size: .9em;
+    width: auto;
+}
+
+.right-side {
+    margin: 10px 10px 10px 225px;
+    min-width: 840px;
+    width: auto;
+    z-index: 3; // content can overlap when the browser is narrow
+}
+
+.article {
+    padding: 24px;
+}
+
+.article img {
+    border: 0;
+    margin: 10px;
+}
+
+.img_link {
+    text-decoration: none;
+}
+
+.google-iframe {
+    border: 0;
+}
+
+.map {
+    height: 350px;
+    width: 425px;
+}
+
+.calendar {
+    height: 600px;
+    width: 100%;
+}
+
+.credentials {
+    list-style-position: inside;
+}
+
+.head-shot {
+    float: left;
+    margin: 0 15px;
+}
+
+.footer {
+    color: $footer-font-color;
+    font-size: .75em;
+    margin-bottom: 2em;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.galleria {
+    background: #000;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+}
+
+.testimonial p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.test_identity {
+    font-weight: bold;
+}

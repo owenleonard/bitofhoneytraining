@@ -1,0 +1,96 @@
+@import 'colors';
+
+.menu {
+    float: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+
+    > li {
+        background: -moz-linear-gradient(top, $menu-button-top 0, $menu-button-middle 44%, $menu-button-bottom 100%); // FF3.6+
+        background: -ms-linear-gradient(top, $menu-button-top 0, $menu-button-middle 44%, $menu-button-bottom 100%); // IE10+
+        background: -o-linear-gradient(top, $menu-button-top 0, $menu-button-middle 44%, $menu-button-bottom 100%); // Opera 11.10+
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0, $menu-button-top), color-stop(44%, $menu-button-middle), color-stop(100%, $menu-button-bottom)); // Chrome,Safari4+
+        background: -webkit-linear-gradient(top, $menu-button-top 0, $menu-button-middle 44%, $menu-button-bottom 100%); // Chrome10+,Safari5.1+
+        background: linear-gradient(top, $menu-button-top 0, $menu-button-middle 44%, $menu-button-bottom 100%); // W3C
+        color: $menu-font-color;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$menu-button-top, endColorstr=$menu-button-bottom,GradientType=0); // IE6-9
+        font-size: 15px;
+        position: relative;
+        z-index: 100;
+
+        > a {
+            color: $menu-font-color;
+            display: block;
+            padding: 7px 12px;
+            text-decoration: none;
+        }
+    }
+
+    > li:hover {
+        background: $menu-button-top-hover;
+        background: -moz-linear-gradient(top, $menu-button-top-hover 0, $menu-button-middle-hover 44%, $menu-button-bottom-hover 100%); // FF3.6+
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0, $menu-button-top-hover), color-stop(44%, $menu-button-middle-hover), color-stop(100%, $menu-button-bottom-hover)); // Chrome,Safari4+
+        background: -webkit-linear-gradient(top, $menu-button-top-hover 0, $menu-button-middle-hover 44%, $menu-button-bottom-hover 100%); // Chrome10+,Safari5.1+
+        background: -o-linear-gradient(top, $menu-button-top-hover 0, $menu-button-middle-hover 44%, $menu-button-bottom-hover 100%); // Opera 11.10+
+        background: -ms-linear-gradient(top, $menu-button-top-hover 0, $menu-button-middle-hover 44%, $menu-button-bottom-hover 100%); // IE10+
+        background: linear-gradient(top, $menu-button-top-hover 0, $menu-button-middle-hover 44%, $menu-button-bottom-hover 100%); // W3C
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$menu-button-top-hover, endColorstr=$menu-button-bottom-hover,GradientType=0); // IE6-9
+
+        > ul {
+            display: block;
+        }
+    }
+}
+
+.submenu {
+    border-left: 2px solid $menu-button-bottom;
+    border-left: 2px solid rgba(0, 0, 0, .5);
+    display: none;
+    left: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+
+    > a {
+        font-size: .8em;
+    }
+
+    > li:hover:before {
+        background: #000;
+        background: rgba(0, 0, 0, .5);
+        border: 1px solid $menu-font-color;
+        content: '';
+        display: block;
+        height: 1em;
+        left: -.75em;
+        position: absolute;
+        top: .5em;
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        width: 1em;
+    }
+}
+
+.nav {
+    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+    clear: both;
+    float: left;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-left: 12px;
+    margin-top: 10px;
+    width: 200px;
+
+    > img {
+        border: 0;
+        margin-left: 30px;
+        margin-top: 15px;
+    }
+}

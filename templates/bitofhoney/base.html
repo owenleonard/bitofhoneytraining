@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Bit of Honey Training LLC</title>
+
+		<meta name="Description" content="Bit of Honey Training LLC is a training and instruction stable in NW Fort Collins">
+		<meta name="Keywords" content="Bit of Honey, northwest, colorado, northern colorado, fort collins, horse, training, lessons, boarding, gentle, Kim Leonard, riding, english, western, dressage, 3 day eventing">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" type="text/css" media="screen" href="/static/dist/main.css">
+		<script type="text/javascript" src="/static/dist/production.min.js"></script>
+<!-- 		<script type="text/javascript">
+			$(function () {
+				$('#defaultCountdown').countdown({until: $.countdown.UTCDate(-16, 2014, 3, 8)});
+			});
+		</script> -->
+		<link rel="shortcut icon" href="/static/images/favicon.ico">
+		<link rel="icon" href="/static/images/favicon.ico">
+	</head>
+
+	<body>
+		<div class="wrapper">
+
+			<header>
+			<div class="header">
+				<a href="/"><img src="/static/images/boh_logo.png" alt="Bit of Honey Training LLC"></a>
+				<span>{{ header }}</span>
+			</div>
+			</header>
+
+			<div class="header-divider"></div>
+
+			<nav>
+			<div class="nav">
+				<ul class="menu">
+					<li><a href="/">Home</a></li>
+					<li><a href="facilities">Facilities</a></li>
+					<li><a href="trainer">Trainer</a></li>
+					<li><a href="testimonials">Testimonials</a></li>
+					<li><a href="lesson_horses">Lesson Horses</a></li>
+					<li>
+						<a>Services</a>
+						<ul class="menu submenu">
+							<li><a href="pt">PT &amp; Rehab</a></li>
+							<li><a href="holistic">Holistic Training</a></li>
+							<li><a href="fitting">Tack Fitting</a></li>
+							<li><a href="consulting">Consulting</a></li>
+							<li><a href="instruction">Riding Instruction</a></li>
+							<li><a href="services">Other Services</a></li>
+						</ul>
+					</li>
+					<li><a href="directions">Directions</a></li>
+					<li><a href="pictures">Pictures</a></li>
+					<li><a href="http://bitofhoneytraining.blogspot.com">Blog</a></li>
+					<li><a href="calendar">Calendar</a></li>
+					<li><a href="reading">Recommended Reading</a></li>
+				</ul>
+				<a href="http://www.centeredriding.org">
+					<img src="/static/images/crlogo2.png">
+				</a>
+			</div>
+			</nav>
+
+			<div class="right-side">
+				<section>
+				<div class="section">
+<!-- 					<article>
+					<div class="article">
+						<div id="defaultCountdown"></div>
+					</div>
+					</article> -->
+			        {% block content %}{% endblock %}
+				</div>
+				</section>
+
+				<div class="footer">
+					Bit of Honey Training LLC.<br>
+					12245 North County Road 17<br>
+					Fort Collins, CO 80524<br>
+					(970) 231-9999<br>
+					<a href="mailto:bitofhoneytraining@gmail.com">bitofhoneytraining@gmail.com</a>
+					<script type="text/javascript">
+						var $buoop = {};
+						$buoop.ol = window.onload;
+						window.onload=function(){
+						try {if ($buoop.ol) $buoop.ol();}catch (e) {}
+							var e = document.createElement("script");
+							e.setAttribute("type", "text/javascript");
+							e.setAttribute("src", "//browser-update.org/update.js");
+							document.body.appendChild(e);
+						};
+					</script>
+				</div>
+			</div>
+		</div>
+		{% block gallery %}{% endblock %}
+	</body>
+</html>
