@@ -41,7 +41,6 @@
 		<span id="total-cost">0.00</span>
 	</div>
 </div>
-{% endblock %}
 
 <script>
 var unitTable = {
@@ -87,3 +86,5 @@ function calculateHay() {
 	$('#total-cost').text(($('#unit-cost').val() * yearlySum).toFixed(2));
 }
 </script>
+
+{% endblock %}
