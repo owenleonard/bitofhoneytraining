@@ -1,0 +1,89 @@
+{% extends "bitofhoney/base.html" %}
+{% block title %}Hay Estimator{% endblock %}
+
+{% block content %}
+<div class="article">
+	<form>
+		<div>
+			My hay costs $<input id="unit-cost" type="number" min="0" value="0.00" step="0.01" onchange="calculateHay()"/> per
+			<select id="units" onchange="changeUnits()">
+				<option value="smallBale">55 lb bale</option>
+				<option value="largeBale">110 lb bale</option>
+				<option value="ton">ton</option>
+			</select>
+		</div>
+		<table id="horses">
+			<thead>
+				<tr>
+					<th>Horse</th>
+					<th>Weight (lbs)</th>
+					<th>Dietary needs</th>
+					<th>lbs per day</th>
+					<th>bales per year</th>
+					<th>Delete</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="3">Totals</td>
+					<td id="day-total"></td>
+					<td id="year-total"></td>
+					<td></td>
+				</tr>
+			</tfoot>
+		</table>
+		<input type="button" id="add-horse" onclick="addHorse()" value="Add Horse" />
+	</form>
+	<div class="results">
+		<span>Cost per year: $</span>
+		<span id="total-cost">0.00</span>
+	</div>
+</div>
+{% endblock %}
+
+<script>
+var unitTable = {
+	'smallBale': { 'header': 'bales per year', 'pounds': 55},
+	'largeBale': { 'header': 'bales per year', 'pounds': 110},
+	'ton': { 'header': 'tons per year', 'pounds': 2000}
+}
+
+function addHorse() {
+	$('#horses').append('<tr><td>' + ($('#horses tbody tr').length + 1) + '</td><td><input class="weight" type="number" min="0" value="0" onchange="calculateHay()"/></td><td><select onchange="calculateHay()"><option value="0.01">Gets fat looking at grass</option><option value="0.015">Average eater</option><option value="0.02">Hard keeper</option></select></td><td class="hay-per-day"></td><td class="hay-per-year"></td><td><input type="button" class="delete-horse" onclick="deleteHorse(this)" value="X" /></td></tr>');
+}
+
+function changeUnits() {
+	$('#horses thead tr th:nth-child(5)').html(unitTable[$('#units').val()].header);
+	calculateHay();
+}
+
+function deleteHorse(button) {
+	$(button).parent().parent().remove();
+	$('#horses tbody tr').each(function(index, element) {
+		$(element).find('td:first-child').html(index+1);
+	});
+	calculateHay();
+}
+
+function calculateHay() {
+	var dailySum = 0,
+		yearlySum = 0,
+		pounds = unitTable[$('#units').val()].pounds;
+
+	$('#horses tbody tr').each(function(){
+		var hayPerDay = $(this).find('.weight').val() * $(this).find('select').val(),
+			hayPerYear = (hayPerDay * 365) / pounds;
+
+		dailySum += hayPerDay;
+		yearlySum += hayPerYear;
+		$(this).find('.hay-per-day').html(hayPerDay.toFixed(2));
+		$(this).find('.hay-per-year').html(hayPerYear.toFixed(2));
+	});
+
+	$('#day-total').html(dailySum.toFixed(2));
+	$('#year-total').html(yearlySum.toFixed(2));
+	$('#total-cost').text(($('#unit-cost').val() * yearlySum).toFixed(2));
+}
+</script>

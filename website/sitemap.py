@@ -136,6 +136,14 @@ class CalendarSitemap( Sitemap ):
     changefreq = "monthly"
     priority = "1"
 
+class EstimatorSitemap( Sitemap ):
+
+    def items(self):
+        return [self]
+
+    location = "/estimator"
+    changefreq = "monthly"
+    priority = "1"
 
 sitemaps = {
     '/': MainSitemap,
@@ -153,4 +161,5 @@ sitemaps = {
     '/consulting': ConsultingSitemap,
     '/instruction': InstructionSitemap,
     '/calendar': CalendarSitemap,
+    '/estimator': EstimatorSitemap,
 }

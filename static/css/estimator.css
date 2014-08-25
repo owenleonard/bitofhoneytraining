@@ -1,0 +1,22 @@
+#horses {
+    border-collapse: collapse;
+}
+#horses, #horses th, #horses td {
+    border: 1px solid #bcac84;
+}
+#horses th {
+    height: 40px;
+    width: 150px;
+}
+#horses th, #horses tfoot {
+    background-color: #bcac84;
+}
+#horses tr:nth-child(even) td {
+    background-color: #ecdcb4;
+}
+#horses tbody tr td:last-child {
+    text-align: center;
+}
+.delete-horse {
+    color: red;
+}

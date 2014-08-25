@@ -20,5 +20,6 @@ urlpatterns = patterns('website.views',
     url(r'(?i)consulting$', 'consulting'),
     url(r'(?i)instruction$', 'instruction'),
     url(r'(?i)calendar$', 'calendar'),
+    url(r'(?i)estimator$', 'estimator'),
 )
 

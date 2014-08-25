@@ -48,3 +48,6 @@ def instruction(request):
 
 def calendar(request):
     return render_to_response('bitofhoney/calendar.html', {'page': 'calendar', 'header': 'Calendar'})
+
+def estimator(request):
+    return render_to_response('bitofhoney/estimator.html', {'page': 'estimator', 'header': "Hay Estimator"})
