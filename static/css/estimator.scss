@@ -1,0 +1,32 @@
+@import 'colors';
+
+#horses {
+    border-collapse: collapse;
+
+    th {
+        height: 40px;
+        width: 150px;
+    }
+
+    th,
+    td {
+        border: 1px solid $background-color;
+    }
+
+    th,
+    tfoot {
+        background-color: $background-color;
+    }
+
+    tr:nth-child(even) td {
+        background-color: $menu-font-color;
+    }
+
+    td:last-child {
+        text-align: center;
+    }
+
+    .delete-horse {
+        color: #f00;
+    }
+}
