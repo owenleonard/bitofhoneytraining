@@ -42,11 +42,6 @@ a:hover {
     color: #f20;
 }
 
-a[name] {
-    color: inherit;
-    text-decoration: inherit;
-}
-
 .wrapper {
     background-color: $background-color;
     margin: 0 auto;
@@ -84,7 +79,7 @@ a[name] {
     }
 }
 
-.img_link {
+.img-link {
     text-decoration: none;
 }
 
@@ -137,6 +132,6 @@ a[name] {
     margin-top: 0;
 }
 
-.test_identity {
+.test-identity {
     font-weight: bold;
 }

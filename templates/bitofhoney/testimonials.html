@@ -6,7 +6,7 @@
 {% for testimonial in testimonials %}
 <div class="article testimonial">
 	<p>"{{ testimonial.text }}"<p>
-	<div class="test_identity">{{ testimonial.person }}{% if testimonial.link %}, <a href="{{ testimonial.link }}">{{ testimonial.link }}</a>{% endif %}</div>
+	<div class="test-identity">{{ testimonial.person }}{% if testimonial.link %}, <a href="{{ testimonial.link }}">{{ testimonial.link }}</a>{% endif %}</div>
 </div>
 {% endfor %}
 
