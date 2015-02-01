@@ -71,11 +71,17 @@ a[name] {
 
 .article {
     padding: 24px;
-}
 
-.article img {
-    border: 0;
-    margin: 10px;
+    img {
+        border: 0;
+        margin: 10px;
+    }
+
+    .home-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .img_link {
