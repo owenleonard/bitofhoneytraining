@@ -15,6 +15,9 @@ def facilities(request):
 def lesson_horses(request):
     return render_to_response('bitofhoney/lesson_horses.html', {'page': 'lesson_horses', 'header': 'Lesson Horses'})
 
+def horses_for_sale(request):
+    return render_to_response('bitofhoney/horses_for_sale.html', {'page': 'horses_for_sale', 'header': 'Horses For Sale'})
+
 def pictures(request):
     return render_to_response('bitofhoney/pictures.html', {'page': 'pictures', 'header': 'Pictures'})
 

@@ -37,6 +37,15 @@ class LessonHorsesSitemap( Sitemap ):
     changefreq = "monthly"
     priority = "1"
 
+class HorsesForSaleSitemap( Sitemap ):
+
+    def items(self):
+        return [self]
+
+    location = "/horses_for_sale"
+    changefreq = "monthly"
+    priority = "1"
+
 class PicturesSitemap( Sitemap ):
 
     def items(self):
@@ -150,6 +159,7 @@ sitemaps = {
     '/directions': DirectionsSitemap,
     '/facilities': FacilitiesSitemap,
     '/lesson_horses': LessonHorsesSitemap,
+    '/horses_for_sale': HorsesForSaleSitemap,
     '/pictures': PicturesSitemap,
     '/reading': ReadingSitemap,
     '/services': ServicesSitemap,
