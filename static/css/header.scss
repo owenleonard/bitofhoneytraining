@@ -1,5 +1,5 @@
 .header {
-    border: 0;
+    border-bottom: 1px solid $menu-button-middle;
     height: 160px;
     min-width: 1020px;
 
@@ -15,9 +15,4 @@
         margin-top: 100px;
         text-align: right;
     }
-}
-
-.header-divider {
-    background-color: $menu-button-middle;
-    height: 1px;
 }
