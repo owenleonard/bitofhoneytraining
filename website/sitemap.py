@@ -37,12 +37,21 @@ class LessonHorsesSitemap( Sitemap ):
     changefreq = "monthly"
     priority = "1"
 
-class HorsesForSaleSitemap( Sitemap ):
+class DreamSitemap( Sitemap ):
 
     def items(self):
         return [self]
 
-    location = "/horses_for_sale"
+    location = "/horses_for_sale/dream"
+    changefreq = "monthly"
+    priority = "1"
+
+class DeweySitemap( Sitemap ):
+
+    def items(self):
+        return [self]
+
+    location = "/horses_for_sale/dewey"
     changefreq = "monthly"
     priority = "1"
 
@@ -159,7 +168,8 @@ sitemaps = {
     '/directions': DirectionsSitemap,
     '/facilities': FacilitiesSitemap,
     '/lesson_horses': LessonHorsesSitemap,
-    '/horses_for_sale': HorsesForSaleSitemap,
+    '/horses_for_sale/dream': DreamSitemap,
+    '/horses_for_sale/dewey': DeweySitemap,
     '/pictures': PicturesSitemap,
     '/reading': ReadingSitemap,
     '/services': ServicesSitemap,
