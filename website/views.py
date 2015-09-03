@@ -21,6 +21,9 @@ def dream(request):
 def dewey(request):
     return render_to_response('bitofhoney/horses_for_sale/dewey.html', {'page': 'dewey', 'header': 'Dewey'})
 
+def monty(request):
+    return render_to_response('bitofhoney/horses_for_sale/monty.html', {'page': 'monty', 'header': 'Monty'})
+
 def pictures(request):
     return render_to_response('bitofhoney/pictures.html', {'page': 'pictures', 'header': 'Pictures'})
 
